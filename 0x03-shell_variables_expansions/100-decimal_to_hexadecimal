@@ -1,11 +1,2 @@
 #!/bin/bash
-
-# Retrieve the value of the DECIMAL environment variable
-decimal=$DECIMAL
-
-# Convert the decimal number to base 16 and print it
-hex=$(printf '%x\n' $decimal)
-echo $hex
-
-# Add a new line
-echo
+printf "%x\n" $DECIMAL

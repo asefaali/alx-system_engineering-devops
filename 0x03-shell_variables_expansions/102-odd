@@ -1,10 +1,2 @@
 #!/bin/bash
-
-# Read the input line by line and print every other line
-count=0
-while read line; do
-    if (( count % 2 == 0 )); then
-        echo $line
-    fi
-    count=$((count + 1))
-done
+paste -d, - - | cut -d, -f1

@@ -1,14 +1,2 @@
 #!/bin/bash
-
-# Retrieve the text to be encoded/decoded
-text=$1
-
-# Encode the text using rot13
-encoded=$(echo $text | tr 'A-Za-z' 'N-ZA-Mn-za-m')
-
-# Decode the text using rot13
-decoded=$(echo $encoded | tr 'A-Za-z' 'N-ZA-Mn-za-m')
-
-# Print the encoded and decoded text
-echo "Encoded text: $encoded"
-echo "Decoded text: $decoded"
+tr 'A-Za-z' 'N-ZA-Mn-za-m'

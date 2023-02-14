@@ -1,18 +1,2 @@
 #!/bin/bash
-
-# Retrieve the values of the WATER and STIR environment variables
-water=$WATER
-stir=$STIR
-
-# Convert the water and stir numbers to decimal using the base# arithmetic expansion
-water_dec=$((#$water))
-stir_dec=$((#$stir))
-
-# Calculate the sum of the decimal numbers
-sum_dec=$((water_dec + stir_dec))
-
-# Convert the sum to the bestchol base using the base# arithmetic expansion
-sum_bestchol=$(echo "obase=bestchol; $sum_dec" | bc)
-
-# Print the sum in the bestchol base
-echo $sum_bestchol
+printf "%o\n" $(( $((5#$(echo $WATER | tr water 01234))) + $((5#$(echo $STIR | tr stir. 01234))) )) | tr 01234567 behlnort
