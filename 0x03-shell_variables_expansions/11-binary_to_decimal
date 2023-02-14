@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Retrieve the value of the BINARY environment variable
+binary=$BINARY
+
+# Convert the binary number to base 10 and print it
+decimal=$((2#$binary))
+echo $decimal
+
+# Add a new line
+echo
