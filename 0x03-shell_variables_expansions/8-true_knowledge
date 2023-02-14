@@ -1,10 +1,2 @@
 #!/bin/bash
-
-# Retrieve the value of the TRUEKNOWLEDGE environment variable
-value=$TRUEKNOWLEDGE
-
-# Add 128 to the value and print the result
-echo $(($value + 128))
-
-# Add a new line
-echo
+echo $(($TRUEKNOWLEDGE + 128))
